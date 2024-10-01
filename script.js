@@ -1,3 +1,5 @@
+import apiKey from './config.js';
+
 const cityInput= document.querySelector('.city-input')
 const searchBtn= document.querySelector('.search-btn')
 
@@ -15,7 +17,7 @@ const currentDateTxt = document.querySelector('.current-date-txt')
 
 const forecastItemsContainer = document.querySelector('.forecast-item-container')
 
-const apiKey = '91a406f3dd935445b26d6813f6b66bf8'
+// const apiKey = '91a406f3dd935445b26d6813f6b66bf8'
 
 searchBtn.addEventListener('click',()=> {
     if (cityInput.value.trim()!= '') {
@@ -84,7 +86,7 @@ async function updateWeatherInfo(city){
     tempTxt.textContent = Math.round(temp) + ' °C'
     conditionTxt.textContent = main
     humidityValueTxt.textContent = humidity + '%'
-    windValueTxt.textContent = speed + 'M/s'
+    windValueTxt.textContent = speed + 'm/s'
 
     currentDateTxt.textContent = getCurrentDate()
     weatherSummaryImg.src = `assets/weather/${getweatherIcon(id)}`
