@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing:border-box;
+    font-weight: 400;
+}
+
+body{
+    background:url('assets/bg.jpg') ;
+    background-color: #222;
+    width: 100%;
+    height: 100dvh;
+    background-size: cover;
+    background-position: center;
+  }
+body::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100dvh;
+  background: rgb(0, 0, 0, 0.15);
+  backdrop-filter: blur(15px);
+}
+
+/* UTILITIES */
+.regular-txt{
+  font-weight: 400;
+}
+/* END UTILITIES */
+.main-container{
+  position: absolute; /* or position: relative; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* border: solid; */
+  width: 350px;
+  /* max-width:470px; */
+  height: 496px;
+  /* text-align: center; */
+  z-index: 1;
+  margin: 0 auto 0;
+  background: linear-gradient(top,rgb(0, 0, 0, 0.15),rgb(255, 255, 255, 0.15));
+  border-radius: 12px;
+  backdrop-filter: blur(100px);
+  padding: 20px
+}
+
+/* Input CONTAINER */
+.input-container{
+  position: relative;
+  margin-bottom: 20PX;
+}
+.input-container:hover .search-city {
+  display: block;
+}
+
+.city-input{
+  width:100%;
+  padding: 10px 16px;
+  border-radius: 99px;
+  border: 3px solid transparent;
+  background: rgb(0, 0, 0,0.15);
+  outline:none;
+  font-weight: 500 ;
+  transition: 0.25s border;
+  padding-right: 55px;
+}
+
+.city-input:focus{
+  border:3px  solid rgb(0, 0, 0, 0.15) ; 
+}
+
+.city-input::placeholder{
+  color: rgb(255, 255, 255, 0.15)
+}
+
+.search-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background:none;
+  display: flex;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.search-btn {
+  background-color: none;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* .search-btn:hover {
+  transform: rotate(60 deg) scale(1.2);
+  transition: transform 0.2s ease-in-out;
+} */
+
+.search-btn:hover {
+  animation: spin 0.5s ease-in-out;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* END INPUT CONTAINER */
+
+/* SECTION: WEATHER INFO */
+
+.weather-info{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+} 
+
+.location-date-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.location{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.weather-summary-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weather-summary-img{
+  width: 120px;
+  height: 120px;
+}
+
+.weather-summary-info{
+  text-align: end;
+}
+
+
+/* dispay the div class to one end and the other to opp end  */
+.weather-conditions-container {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.conditon-item{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.conditon-item span{
+  font-size: 30px;
+}
+
+.forecast-item-container{
+  display: flex;
+  gap: 15px;
+  overflow-x: scroll;
+  padding-bottom: 12px;
+  
+}
+
+.forecast-item-container::-webkit-scrollbar{
+  height: 8px;
+  width: 8px;
+}
+
+.forecast-item-container::-webkit-scrollbar-track{
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 99px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-item-container::-webkit-scrollbar-thumb{
+  background: rgb(0, 0, 0, 0.15);
+  border-radius: 99px;
+}
+
+.forcast-item{
+  min-width: 70px;
+  background: rgb(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px;
+  align-items: center;
+  border-radius: 12px;
+}
+
+.forcast-item:hover{
+  background: rgb(255, 255, 255,0.15);
+}
+
+.forecast-item-img{
+  width: 35px;
+  height: 35px;
+}
+/* END SECTION: WEATHER INFO */
+
+/* SECTION: MESSAGE */
+.section-message{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  margin-top: 25%;
+}
+
+.section-message img{
+  height: 180px;
+  width:fit-content;
+}
+
+/* END SECTION: MESSAGE */
