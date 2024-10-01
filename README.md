@@ -19,6 +19,9 @@ The **Weather App** is a simple web application that allows users to check the c
 ## API Integration
 The app integrates with the OpenWeather API to get weather data for different cities. The API provides the current temperature, weather description, and other useful information.
 
+## Security considerations
+Added api to config.js and is imported in script.js for security which is not visible in git repo
+
 ### How API Integration Works:
 1. The user inputs the name of a city.
 2. The app sends an HTTP GET request to the OpenWeather API with the city name.
